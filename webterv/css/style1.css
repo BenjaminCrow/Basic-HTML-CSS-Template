@@ -1,0 +1,134 @@
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font: Arial, Helvetica,sans-serif;
+}
+
+#toppom {
+  background: url('../img/roman_road.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.ajh {
+  text-align: center;
+  padding: 100px;
+  font-size: 60px;
+  color: #660000;
+  font-weight: bold;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #696969;
+  overflow: auto;
+  border-top: 4px #660000 solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navbar a {
+  float: left;
+  padding: 17px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  width: 25%;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #660000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navbar a.active {
+  background-color: #660000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 30%;
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.foto {
+  background: url('../img/model.jpg');
+  width: 750px;
+  background-position: left;
+  border-radius: 20px;
+}
+
+
+footer {
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #696969;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  @media print {
+        img {
+          display: none;
+        }
+        h1 {
+          page-break-before: always;
+        }
+        h1, h2, h3, h4, h5 {
+          page-break-after: avoid;
+        }
+        table, figure {
+          page-break-inside: avoid;
+        }
+        div {
+          width: 8pt;
+        }
+      }
+      @page :left {
+        margin: 0.5cm;
+        @bottom-left {
+          content: "Oldal " counter(page) " / " counter(pages);
+        }
+      }
